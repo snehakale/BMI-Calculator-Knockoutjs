@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Body Mass Index Calculator</title>
+  </head>
+  <body>
+    <div>
+      Weight: <input type="text" data-bind="value:weight" name="weight" size="10" />
+        &nbsp; lb <br/>
+      Height: <input type="text" data-bind="value:heightInFeet" name="heightInFeet"
+        size="10" /> &nbsp; feet <br />
+      <input type="text" data-bind="value:heightInInches" name="heightInInches"
+        size="10" /> &nbsp; inches
+    </div>
+    <div>
+        BMI : <strong data-bind="text: bmi"></strong>
+        <br/>
+        <strong data-bind="text: result"></strong>
+    </div>
+    <script src="js/lib/knockout-3.4.2.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
