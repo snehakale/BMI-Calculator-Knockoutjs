@@ -3,21 +3,57 @@
   <head>
     <meta charset="UTF-8">
     <title>Body Mass Index Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div>
-      Weight: <input type="text" data-bind="value:weight" name="weight" size="10" />
-        &nbsp; lb <br/>
-      Height: <input type="text" data-bind="value:heightInFeet" name="heightInFeet"
-        size="10" /> &nbsp; feet <br />
-      <input type="text" data-bind="value:heightInInches" name="heightInInches"
-        size="10" /> &nbsp; inches
+    <div class="main-div">
+      <span class="heading-span-item">
+        Body-Mass-Index (BMI) Calculator
+      </span>
+      <table class="table-styles">
+        <tr class="table-row-styles">
+          <td class="table-column left-child">
+            <span class="table-span-item"> Weight : </span>
+          </td>
+          <td class="table-column right-child">
+            <input type="text" data-bind="value:weight" name="weight" size="15"
+              class="table-input-item"/>
+            &nbsp;
+            <span class="table-span-item"> lb </span>
+          </td>
+        </tr>
+        <tr class="table-row-styles">
+          <td class="table-column left-child">
+            <span class="table-span-item"> Height : </span>
+          </td>
+          <td class="table-column right-child">
+            <input type="text" data-bind="value:heightInFeet" name="heightInFeet"
+             size="15" class="table-input-item" />
+             &nbsp; <span class="table-span-item">feet </span>&nbsp;
+            <input type="text" data-bind="value:heightInInches" name="heightInInches"
+              size="15" class="table-input-item" />
+             &nbsp;<span class="table-span-item"> inches </span>
+          </td>
+        </tr>
+        <tr class="table-row-styles">
+          <td class="table-column left-child">
+            <span class="table-span-item"> BMI : </span>
+          </td>
+          <td class="table-column right-child">
+            <span class="table-span-item" data-bind="text: bmi"></span>
+          </td>
+        </tr>
+        <tr class="table-row-styles">
+          <td class="table-column left-child">
+            <span class="table-span-item"> Result : </span>
+          </td>
+          <td class="table-column right-child">
+            <span class="table-span-item" data-bind="text: result"></span>
+          </td>
+        </tr>
+      </table>
     </div>
-    <div>
-        BMI : <strong data-bind="text: bmi"></strong>
-        <br/>
-        <strong data-bind="text: result"></strong>
-    </div>
+
     <script src="js/lib/knockout-3.4.2.js"></script>
     <script src="js/app.js"></script>
   </body>
