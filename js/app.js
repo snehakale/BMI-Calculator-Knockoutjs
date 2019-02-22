@@ -58,14 +58,17 @@ var ViewModel = function() {
 
   // result
   self.result =ko.computed(function() {
-    if(self.bmi() > 25){
+    if(self.bmi() > 25) {
       return "Overweight";
     }
-    else if(self.bmi() < 20){
+    else if(self.bmi() < 20) {
       return "Underweight";
     }
-    else{
+    else if(self.bmi() >= 21 && self.bmi() <=25 ) {
       return "Normal";
+    }
+    else {
+      return "";
     }
   }, self);
 
