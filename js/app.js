@@ -9,9 +9,7 @@ var ViewModel = function() {
   // height in inches
   self.heightInInches = ko.observable("");
   // bmi
-  //self.bmi = ko.observable("");
-  // result
-  //self.result = ko.observable("");
+  self.bmiCalculated = ko.observable("");
 
   // calculations
   // weight in pounds to kg
@@ -52,9 +50,22 @@ var ViewModel = function() {
   // bmi value
   self.bmi = ko.computed(function(){
       return(
-         Number(self.weightInKg()) / Number(self.heightFinal())
+         (Number(self.weightInKg()) / Number(self.heightFinal())).toFixed(2)
       )
   }, self);
+
+  // bmi
+  self.bmiCalculated = ko.computed( function() {
+    if(isNaN(self.bmi())){
+      return "";
+    }
+    else if(self.bmi() < 0){
+      return "";
+    }
+    else {
+      return self.bmi();
+    }
+  });
 
   // result
   self.result =ko.computed(function() {
@@ -64,7 +75,7 @@ var ViewModel = function() {
     else if(self.bmi() < 20) {
       return "Underweight";
     }
-    else if(self.bmi() >= 21 && self.bmi() <=25 ) {
+    else if(self.bmi() >= 20 && self.bmi() <=25 ) {
       return "Normal";
     }
     else {
