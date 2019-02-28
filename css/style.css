@@ -19,7 +19,7 @@ main-div {
   text-align: center;
   font-weight: bold;
   font-family: sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 25px;
   color: #154DDC;
 }
@@ -28,7 +28,7 @@ main-div {
   width: 50%;
   align-self: center;
   margin: auto;
-  margin-top: 2%;
+  margin-top: 3%;
   padding: auto;
   position: relative;
   border: 2px solid #5985F7;
@@ -55,8 +55,6 @@ main-div {
 
 .table-input-item {
   border: 2px solid #95AFF1;
-  border-radius: 3px;
-  align-content: center;
   padding: 1px;
 }
 
