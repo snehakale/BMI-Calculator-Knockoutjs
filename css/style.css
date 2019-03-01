@@ -29,7 +29,6 @@ main-div {
   align-self: center;
   margin: auto;
   margin-top: 3%;
-  padding: auto;
   position: relative;
   border: 2px solid #5985F7;
 }
@@ -43,14 +42,17 @@ main-div {
 .table-column {
   background-color: #D1DAF1;
   padding: 5px;
+
 }
 
 .left-child {
   width: 35%;
+  text-align: center;
 }
 
 .right-child {
   width: 65%;
+  text-align: left;
 }
 
 .table-input-item {
@@ -64,4 +66,38 @@ main-div {
   font-family: sans-serif;
   font-size: 20px;
   line-height: 25px;
+}
+
+@media only screen and (max-width: 300px) {
+	.main-div {
+    text-align: left;
+  }
+
+  .heading-span-item {
+    align-self: left;
+    font-size: 20px;
+  }
+
+  .table-styles {
+    width: auto;
+  }
+
+}
+
+@media only screen and (min-width:301px) and (max-width: 530px) {
+  .table-styles {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width:531px) and (max-width: 654px) {
+  .table-styles {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 655px) and (max-width: 800px) {
+  .table-styles {
+    width: 60%;
+  }
 }
