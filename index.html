@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Body Mass Index Calculator</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -13,10 +14,10 @@
       <table class="table-styles">
         <tr class="table-row-styles">
           <td class="table-column left-child">
-            <span class="table-span-item"> Weight : </span>
+            <span class="table-span-item"> Weight </span>
           </td>
           <td class="table-column right-child">
-            <input type="text" data-bind="value:weight" name="weight" size="15"
+            <input type="number" data-bind="value:weight" name="weight" size="15"
               class="table-input-item"/>
             &nbsp;
             <span class="table-span-item"> lb </span>
@@ -24,13 +25,13 @@
         </tr>
         <tr class="table-row-styles">
           <td class="table-column left-child">
-            <span class="table-span-item"> Height : </span>
+            <span class="table-span-item"> Height </span>
           </td>
           <td class="table-column right-child">
-            <input type="text" data-bind="value:heightInFeet" name="heightInFeet"
+            <input type="number" data-bind="value:heightInFeet" name="heightInFeet"
              size="15" class="table-input-item" />
              &nbsp; <span class="table-span-item">feet </span>&nbsp;
-            <input type="text" data-bind="value:heightInInches" name="heightInInches"
+            <input type="number" data-bind="value:heightInInches" name="heightInInches"
               size="15" class="table-input-item" />
              &nbsp;<span class="table-span-item"> inches </span>
           </td>
