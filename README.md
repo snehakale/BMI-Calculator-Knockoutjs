@@ -6,7 +6,7 @@ This project performs operations to calculate one's Body Mass Index. This uses K
 ## Pre-Requisites and Installation
 1. Download / Clone the given Github Project.
 2. Unzip the folders and files.
-3. Run **index.html** file.
+3. Run **index.html** file to check the outout.
 
 ## Code Examples 
 1. **index.html :** 
@@ -30,6 +30,8 @@ For Example : ` self.weightInKg = ko.computed(function(){
 ## References
 1. [Knockout JS Framework Introduction](https://knockoutjs.com/documentation/introduction.html)
 2. [Knockout: The text Binding](https://knockoutjs.com/documentation/text-binding.html)
+3. [CSS Tutorial](https://www.w3schools.com/css/)
+4. [HTML Tutorial](https://www.w3schools.com/html/)
 
 ## Author
 Sneha Kale
