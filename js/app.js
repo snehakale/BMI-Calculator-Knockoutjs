@@ -1,5 +1,6 @@
 // viewModel
 var ViewModel = function() {
+  // self
   var self = this;
 
   // weight
@@ -26,7 +27,7 @@ var ViewModel = function() {
     )
   },self);
 
-  // sum for heights
+  // sum for heights in inches
   self.heightsTotal = ko.computed(function(){
     return(
       Number(self.heightInFeetConverted()) + Number(self.heightInInches())
@@ -54,28 +55,29 @@ var ViewModel = function() {
       )
   }, self);
 
-  // bmi
-  self.bmiCalculated = ko.computed( function() {
+  // bmi value to display
+  self.bmiCalculated = ko.computed(function(){
     if(isNaN(self.bmi())){
       return "";
     }
     else if(self.bmi() < 0){
       return "";
     }
-    else {
+    else
+    {
       return self.bmi();
     }
   });
 
-  // result
-  self.result =ko.computed(function() {
-    if(self.bmi() > 25) {
+  // result to display
+  self.result =ko.computed(function(){
+    if(self.bmi() > 25){
       return "Overweight";
     }
-    else if(self.bmi() < 20) {
+    else if(self.bmi() < 20){
       return "Underweight";
     }
-    else if(self.bmi() >= 20 && self.bmi() <=25 ) {
+    else if(self.bmi() >= 20 && self.bmi() <=25){
       return "Normal";
     }
     else {
@@ -85,5 +87,5 @@ var ViewModel = function() {
 
 }
 
-// binding
+// viewmodel binding
 ko.applyBindings(new ViewModel());

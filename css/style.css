@@ -1,7 +1,9 @@
+/* Rule for whole page */
 * {
   box-sizing: border-box;
 }
 
+/* Rules for body and main div */
 body,
 main-div {
   width: 100%;
@@ -24,6 +26,7 @@ main-div {
   color: #154DDC;
 }
 
+/* Rules for styling table */
 .table-styles {
   width: 50%;
   align-self: center;
@@ -68,6 +71,7 @@ main-div {
   line-height: 25px;
 }
 
+/* Media query for screen sizes less than 300px */
 @media only screen and (max-width: 300px) {
 	.main-div {
     text-align: left;
@@ -84,18 +88,21 @@ main-div {
 
 }
 
+/* Media query for screen sizes between 301px and 530px */
 @media only screen and (min-width:301px) and (max-width: 530px) {
   .table-styles {
     width: 80%;
   }
 }
 
+/* Media query for screen sizes between 531px and 654px */
 @media only screen and (min-width:531px) and (max-width: 654px) {
   .table-styles {
     width: 70%;
   }
 }
 
+/* Media query for screen sizes between 655px and 800px */
 @media only screen and (min-width: 655px) and (max-width: 800px) {
   .table-styles {
     width: 60%;
